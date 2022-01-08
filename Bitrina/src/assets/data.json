@@ -1,0 +1,25 @@
+{
+
+  "1" : {
+    "title":"Fruits",
+    "description": "A collection of fresh fruits",
+    "items" : [
+      { "title": "Apple", "description": "The only fruit who come after 'A' from persons mind" },
+      { "title": "Banana", "description": "Most default fruit to pop up on mind for 'B'" },
+      { "title": "Orange", "description": "Is it fruit? or color comes first?" },
+      { "title": "Pineapple", "description": "Funny that this isn't even look like a pine apple"}
+    ]
+  },
+
+
+  "2": {
+    "title":"Drinks",
+    "description": "A collection of drinks",
+    "items": [
+      { "title": "Beer", "description": "A fascinating to drink after a long weekday" },
+      { "title": "Coffee", "description": "Who doesn't need coffee these days" },
+      { "title": "Milk", "description": "Not a drink to look for but drink if it's there anyways" },
+      { "title": "Wine", "description": "Yes, a perfect match for a dinner" }
+    ]
+  }
+}
