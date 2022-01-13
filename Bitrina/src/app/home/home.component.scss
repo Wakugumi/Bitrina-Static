@@ -1,12 +1,23 @@
+.row {
+  align-items: center;
+}
+
 .card {
   margin: 10vh 8vw;
-  height: 24vh;
+  height: 32vw;
   width: auto;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   border: none;
   border-radius: 8px;
 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
   .card-block {
-    margin:auto;
+    margin: auto;
+    margin-bottom: 2vh;
+    margin-left: 2vw;
+
   }
 }
