@@ -1,23 +1,37 @@
-.row {
-  align-items: center;
-}
 
 .card {
-  margin: 10vh 8vw;
-  height: 32vw;
-  width: auto;
+  position: relative;
+  margin: 16vw auto;
+  height: 80vw;
+  width: 80vw;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   border: none;
-  border-radius: 8px;
-
+  border-radius: 2rem;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  padding-top: 70%;
 
   .card-block {
-    margin: auto;
-    margin-bottom: 2vh;
-    margin-left: 2vw;
-
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
   }
+
+  .card-overlay {
+    height: 40vw;
+    background:rgba(0,0,0,0.5);
+    filter:blur(6px);
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+  }
+
+    p {
+      background-color: white;
+      border-radius: 5rem;
+      padding:8px 24px;
+      width: auto;
+    }
+
+
 }
