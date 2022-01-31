@@ -14,8 +14,16 @@
 
   .card-block {
     position: absolute;
-    bottom: 8px;
+    bottom: 16px;
     left: 16px;
+
+    background: rgba(255, 255, 255, 0.4);
+    mix-blend-mode: difference;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.5px);
+    -webkit-backdrop-filter: blur(3.5px);
+    border-radius: 5rem;
+    padding:8px 24px;
   }
 
   .card-overlay {
@@ -32,12 +40,10 @@ backdrop-filter: blur(2.9px);
   }
 
     p {
-      background-color: white;
-      border-radius: 5rem;
-      padding:8px 24px;
+      margin: 0;
       width: auto;
+      color: white;
     }
-
 
 }
 

@@ -5,12 +5,11 @@
 
     <div class="col-md-6 col-sm-12" *ngFor="let content of contents">
 
-      <div class="card" style="background-image: url('../../assets/{{content.image}}')">
-        <div class="card-overlay"></div>
+      <a class="card" role="div" [routerLink]="['gallery', content.title]" style="background-image: url('../../assets/{{content.image}}')">
         <div class="card-block">
           <p>{{content.title}}<br>{{content.description}}</p>
         </div>
-      </div>
+      </a>
 
     </div>
 
