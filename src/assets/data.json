@@ -1,6 +1,6 @@
-{
+[
 
-  "1" : {
+  {
     "title":"Fruits",
     "description": "A collection of fresh fruits",
     "image":"category-1.jpg",
@@ -13,7 +13,7 @@
   },
 
 
-  "2": {
+  {
     "title":"Drinks",
     "description": "A collection of drinks",
     "image": "category-2.jpg",
@@ -24,7 +24,7 @@
       { "title": "Wine", "description": "Yes, a perfect match for a dinner" }
     ]
   },
-  "3": {
+  {
     "title":"Stuff",
     "description": "A collection of stuffs",
     "image": "category-3.jpg",
@@ -35,4 +35,4 @@
       { "title": "Wine", "description": "Yes, a perfect match for a dinner" }
     ]
   }
-}
+]

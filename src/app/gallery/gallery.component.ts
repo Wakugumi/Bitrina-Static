@@ -2,6 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { Observable } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
+import { Database, ref, get, onValue, child, orderByChild, orderByValue, equalTo, query, QueryConstraint } from '@angular/fire/database'
+import { ProductService } from '../product.service'
+import { orderByKey } from 'firebase/database';
+import { async } from '@firebase/util';
+import { CategoryService } from '../category.service';
 
 @Component({
   selector: 'app-gallery',
@@ -10,16 +15,21 @@ import { switchMap } from 'rxjs/operators';
 })
 export class GalleryComponent implements OnInit {
 
+  contents: any = []
+  category: any = {}
+  currentId = this.route.snapshot.params["id"]
 
-
-  constructor(private route: ActivatedRoute, private router: Router, private currentId : Number) { }
+  constructor(private route: ActivatedRoute, private router: Router, private db : Database, private Product : ProductService, private Category : CategoryService) { }
 
   ngOnInit(): void {
-    this.route.queryParams.subscribe( params => {
-      this.currentId = params["title"];
-      console.log(this.currentId)
-    })
+
+    this.contents = this.Product.get(this.currentId)
+    this.category = this.Category.get("id", this.currentId)
+
+    console.log(this.category)
+
   }
+
 
   goToProduct(id: any) {
   }

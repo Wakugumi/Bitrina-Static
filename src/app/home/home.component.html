@@ -1,13 +1,12 @@
-
 <div class="container-fluid">
 
   <div class="row">
 
-    <div class="col-md-6 col-sm-12" *ngFor="let content of contents">
+    <div class="col-md-6 col-sm-12" *ngFor="let x of categories">
 
-      <a class="card" role="div" [routerLink]="['gallery', content.title]" style="background-image: url('../../assets/{{content.image}}')">
+      <a class="card" [routerLink]="['gallery', x.id]" role="div" style="background-image: url({{x.imgUrl}})">
         <div class="card-block">
-          <p>{{content.title}}<br>{{content.description}}</p>
+          <h1>{{x.title}}</h1>
         </div>
       </a>
 

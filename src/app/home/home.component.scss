@@ -1,7 +1,7 @@
 
 .card {
   position: relative;
-  margin: 16vw auto;
+  margin: 8vw auto;
   height: 80vw;
   width: 80vw;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
@@ -14,8 +14,14 @@
 
   .card-block {
     position: absolute;
-    bottom: 16px;
-    left: 16px;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    h1 {
+      font-size: 1.5em;
+    }
 
     background: rgba(255, 255, 255, 0.4);
     mix-blend-mode: difference;
@@ -39,11 +45,11 @@ backdrop-filter: blur(2.9px);
     border-bottom-right-radius: 2rem;
   }
 
-    p {
-      margin: 0;
-      width: auto;
-      color: white;
-    }
+  h1 {
+    margin: 0;
+    width: auto;
+    color: white;
+  }
 
 }
 

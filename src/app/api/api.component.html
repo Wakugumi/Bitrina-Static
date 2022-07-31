@@ -1,0 +1,208 @@
+<div class="container">
+
+  <nav class="nav">
+    <a href="/admin/api/categories" class="nav-link" id="nav-1">Category</a>
+    <a href="/admin/api/products" class="nav-link" id="nav-2">Products</a>
+
+  </nav>
+
+  <div id="Categories" class="row" hidden>
+
+    
+
+
+    <div class="col-6 firstcol">
+      <div class="row">
+
+        <div class="col-2"></div>
+        <div class="col-8">
+          <div class="card container" style="padding-top: 0;">
+            <div class="row" id="categories">
+              
+              <div class="col" *ngFor="let x of Categories">
+                <div class="block">
+                  <p>{{x}}</p><button  id="deleteCategory" (click)="deleteCategory(x)" class="material-symbols-outlined" style="padding-left: 8px;">
+                  close</button>
+                </div>
+              </div>
+    
+    
+            </div>
+          </div>
+        </div>
+        <div class="col-2"></div>
+    
+      </div>
+    
+      <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8">
+          <div class="card">
+            <div class="card-header">
+              <h4>Add new category</h4>
+            </div>
+            <div class="card-block">
+              <form (ngSubmit)="addCategory($event)">
+    
+                <div class="form-group">
+                  <label for="title">Title</label>
+                  <input type="text" id="title"
+                  name="title" [(ngModel)]="model_category.title">
+                </div>
+    
+                <div class="form-group">
+                  <label for="desc">Description</label>
+                  <input type="text" id="desc"
+                  name="desc" [(ngModel)]="model_category.description">
+                </div>
+
+                <div class="form-group">
+                  <label for="image">Picture</label>
+                  <input type="file" name="file" id="category-image" (change)="onImageChange($event, 'category')"/>
+                </div>
+
+                <div class="form-group">
+                  <label>Preview</label>
+                  <img id="image-preview" src="../../assets/default.png" alt="Image Preview" >
+                </div>
+                
+                <div class="form-group">
+                  <button type="submit">Save</button>
+                </div>
+                
+              </form>
+    
+    
+                <div class="snippet">
+                  <code>{{model_category | json}}</code>
+                </div>
+    
+            </div>
+          </div>
+          
+        </div>
+        <div class="col-2"></div>
+      </div>
+    </div>
+
+    <div class="col-6 secondcol">
+
+        <div class="snippet">
+          <code>{{ rawData | json }}</code>
+        </div>
+      
+
+    </div>
+
+
+  </div>
+
+
+  <div id="Products" class="row" hidden>
+
+    <div class="col-6 firstcol">
+      <div class="row">
+
+        <div class="col-2"></div>
+        <div class="col-8">
+          <div class="card container" style="padding-top: 0;">
+            <div class="row" id="products">
+              
+              <div class="col" *ngFor="let x of Products">
+                <div class="block">
+                  <p>{{x}}</p><button  id="deleteProduct" (click)="deleteProduct(x)" class="material-symbols-outlined" style="padding-left: 8px;">
+                  close</button>
+                </div>
+              </div>
+    
+    
+            </div>
+          </div>
+        </div>
+        <div class="col-2"></div>
+    
+      </div>
+    
+      <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8">
+          <div class="card">
+            <div class="card-header">
+              <h4>Add new product</h4>
+            </div>
+            <div class="card-block">
+              <form (ngSubmit)="addProduct()">
+    
+                <div class="form-group">
+                  <label for="title">Title</label>
+                  <input type="text" id="title"
+                  name="title" [(ngModel)]="model_product.title">
+                </div>
+    
+                <div class="form-group">
+                  <label for="desc">Description</label>
+                  <input type="text" id="desc"
+                  name="desc" [(ngModel)]="model_product.description">
+                </div>
+
+                <div class="form-group">
+                  <label for="select">Category</label>
+                  <select name="category" id="select" [(ngModel)]="model_product.parentId">
+                    <option *ngFor="let x of Categories" value="{{x.id}}">{{x.title}} | {{x.id}}</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="image">Picture</label>
+                  <input type="file" name="file" id="product-image" (change)="onImageChange($event, 'product')"/>
+                </div>
+                
+                <div class="form-group">
+                  <button type="submit">Save</button>
+                </div>
+                
+              </form>
+    
+    
+                <div class="snippet">
+                  <code>{{model_product | json}}</code>
+                </div>
+    
+            </div>
+          </div>
+          
+        </div>
+        <div class="col-2"></div>
+      </div>
+    </div>
+
+    <div class="col-6 secondcol">
+
+        <div class="snippet">
+          <code>{{ rawData | json }}</code>
+        </div>
+      
+
+    </div>
+
+
+  </div>
+
+  <div id="Error" class="row" hidden>
+
+    
+    <div class="col-3">
+    </div>
+    <div class="col-6">
+      <h1>Error</h1>
+    </div>
+    <div class="col-3">
+    </div>
+
+
+  </div>
+
+  
+
+</div>
+

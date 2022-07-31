@@ -3,11 +3,12 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { HomeComponent } from './home/home.component';
 import { GalleryComponent } from './gallery/gallery.component';
+import { ApiComponent } from './api/api.component';
 
 const routes: Routes = [
   { path:"", component: HomeComponent },
-  { path:"gallery", component: GalleryComponent },
-  { path:"**", redirectTo:"", pathMatch: "full" }
+  { path:"gallery/:id", component: GalleryComponent },
+  { path:"admin/api/:type", component: ApiComponent }
 ];
 
 @NgModule({

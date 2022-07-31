@@ -2,8 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { Observable } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
-import { ProviderService } from '../provider.service'
+import { ProductService } from '../product.service'
+import { CategoryService } from '../category.service'
 import { Product } from '../product';
+import data from '../../assets/data.json';
 
 @Component({
   selector: 'app-home',
@@ -12,17 +14,16 @@ import { Product } from '../product';
 })
 export class HomeComponent implements OnInit {
 
-  contents:any = [];
-  constructor(private dataService : ProviderService, private route: ActivatedRoute, private router: Router) { }
+  contents = data;
+  categories:any[] = [];
+  constructor(private dataService : CategoryService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
-    this.dataService.fetchData().subscribe( (data: any) =>
-    { for( var i in data ){
-        this.contents.push(data[i])
-      }
-    });
+  
+    this.categories = this.dataService.getAll();
+    console.log(this.categories)
   }
 
-  goToProduct(product:Product) {
+  goToProduct(index:any) {
   }
 }

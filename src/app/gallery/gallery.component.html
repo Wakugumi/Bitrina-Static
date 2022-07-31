@@ -1,1 +1,28 @@
-<p>gallery works!</p>
+<div class="container-fluid">
+
+  <div class="row" id="header" *ngFor="let x of category">
+    <div class="col-10">
+      <h1>{{x.title}}</h1>
+    </div>
+    <div class="col-2">
+      <a [routerLink]="'/'" class="material-symbols-outlined">
+        close
+      </a>
+    </div>
+
+  </div>
+
+  <div class="row">
+
+    <div class="col-md-6 col-sm-12" *ngFor="let content of contents">
+      <div class="card" style="background-image: url({{content.imgUrl}})">
+        <div class="card-block">
+          <h4>{{content.title}}</h4>
+          <p>{{content.description}}</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>

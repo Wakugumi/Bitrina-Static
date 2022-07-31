@@ -106,6 +106,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "Bitrina:build:production",
+            "firebaseProject": "bitrina-8d3cb",
+            "firebaseHostingSite": "bitrina-8d3cb"
+          }
         }
       }
     }

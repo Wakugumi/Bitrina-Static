@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "bitrina-8d3cb": {
+      "hosting": {
+        "Bitrina": [
+          "bitrina-8d3cb"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "bitrina-8d3cb"
+  }
+}

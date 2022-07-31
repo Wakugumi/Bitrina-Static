@@ -1,0 +1,153 @@
+$text : #FFC4DD;
+$bg : #82A284;
+$rad : 12px;
+
+.container {
+    padding-top: 2vh;
+}
+
+.nav {
+    margin-bottom: 4vh;
+    border: 1px solid black;
+    border-radius: $rad;
+    a {
+        margin: 4px 0 4px 0;
+    }
+    .active {
+        margin: 4px 4vw 4px 4vw;
+        background-color: $text;
+        border-radius: $rad;
+    }
+}
+
+.card {
+    margin-bottom: 4vh;
+    border-radius: $rad;
+    border: 1px solid grey;
+
+    .card-block{
+        display: block;
+        padding: 8px;
+    }
+
+    .card-header {
+        background-color: white;
+        border-radius: inherit;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        color: #82A284;
+    }
+}
+
+.card-fill {
+    background-color: #82A284;
+}
+
+.form-group {
+    display: grid;
+    margin-bottom: 8vh;
+
+    label {
+        margin:0;
+        font-size: smaller;
+        margin-left: 12px;
+    }
+
+    input[type=text] {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    button {
+        background-color: #E4AEC5;
+        color: #446A46;
+        border: none;
+        border-radius: 8px;
+        padding:8px;    
+        transition: all ease-out .5s;        
+    }
+
+    button:hover {
+        background-color: #FFC4DD;
+        font-weight: bold;
+        color: #82A284;
+    }
+}
+
+.snippet {
+    border : 1px solid gray;
+    border-radius: 5px;
+    padding: 12px;
+}
+
+
+
+.firstcol, .secondcol {
+    height: 90vh;
+    .row {
+        height: max-content;
+    }
+}
+
+
+
+.secondcol {
+    .snippet {
+        height: 100%;
+        background-color: #82A284;
+        
+        code {
+            display: flex;
+            align-items:center;
+            justify-content:center;
+            color: #FFC4DD;
+        }
+    }
+}
+
+#categories {
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+
+
+}
+
+.block {
+    display: flex;
+    margin: 4px;
+    padding: 8px;
+    background-color: #82A284;
+    border: none;
+    border-radius: 8px;
+    color: $text;
+
+    > * {
+        margin: auto;
+    }
+}
+
+#uploadProgress {
+    display: block !important;
+    position: relative !important;
+
+    span {
+        position: absolute;
+        display: inline-block;
+        text-align: right;
+    }
+
+    
+}
+
+#deleteCategory{
+    background: none !important;
+    border: none;
+    padding: 0;
+    color: $text
+}
+
+#image-preview {
+    width: 100px;
+    height: 100px;
+    display: block;
+}
